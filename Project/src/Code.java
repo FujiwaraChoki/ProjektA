@@ -16,8 +16,8 @@ public class Code {
     }
 
     private void run() {
-        addCombo("Sami", "sami6344!");
-        addCombo("Nikita", "nikita1@");
+        addCombo("Sami", "-");
+        addCombo("Nikita", "-");
         System.out.println("Hello.");
         System.out.println("Oce upon a time...");
         System.out.println("Login (1) or create Account (2) > ");
