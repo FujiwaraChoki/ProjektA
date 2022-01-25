@@ -59,6 +59,11 @@ public class Game {
         items.add("Hat");
         items.add("Horse");
         items.add("Shirt");
+        prices.put(items.get(0), 25);
+        prices.put(items.get(1), 50);
+        prices.put(items.get(2), 5);
+        prices.put(items.get(3), 200);
+        prices.put(items.get(4), 40);
 
         String option;
         do {
@@ -68,10 +73,19 @@ public class Game {
             for(int i=0; i<items.size(); i++) {
                 System.out.println(i+"-> "+items.get(i));
             }
-            System.out.println("Which Item is to be bought? (Give Index, Starts from 0)");
+            System.out.println("Which Item is to be bought? (Give Index and Product Name, Starts from 0)");
+            System.out.print("Index: ");
             int itemIndex = Integer.parseInt(Code.scanner.nextLine());
-            System.out.println("Purchased the following: "+items.get(itemIndex));
-            items.remove(itemIndex);
+            System.out.print("Name: ");
+            String itemName = Code.scanner.nextLine();
+            if(gemCount > prices.get(itemName)) {
+                gemCount -= prices.get(itemName);
+                System.out.println("Purchased the following: "+items.get(itemIndex));
+                items.remove(itemIndex);
+            } else {
+                System.out.println("You do not have enough Gems to buy this Item yet.");
+                break;
+            }
             System.out.println("Buy another Item? (Yes, No)");
             option = Code.scanner.nextLine();
         } while (option.equals("Yes"));
