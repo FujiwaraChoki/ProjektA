@@ -1,6 +1,11 @@
 import java.util.HashMap;
 import java.util.Scanner;
 
+/*
+* Author: Sami Hindi
+* Version: 0.5
+* */
+
 public class Code {
 
     static Scanner scanner;
