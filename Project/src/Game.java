@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Game {
 
@@ -51,6 +53,7 @@ public class Game {
     * */
     public static void itemShop() {
         ArrayList<String> items = new ArrayList<>();
+        HashMap<String, Integer> prices = new HashMap<>();
         items.add("Shield");
         items.add("Sword");
         items.add("Hat");
