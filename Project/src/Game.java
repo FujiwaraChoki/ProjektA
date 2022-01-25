@@ -4,12 +4,12 @@ public class Game {
 
     private static int gemCount = 0;
 
-    public static void theGame() {
+    public static void theGame() throws InterruptedException {
         System.out.println("You start off with "+gemCount+" Gems.");
         inGameOptions();
     }
 
-    public static void inGameOptions() {
+    public static void inGameOptions() throws InterruptedException {
         System.out.println("-> Press 1 to: Open Item Shop (You have to buy at least 1 Item)");
         System.out.println("-> Press 2 to: Game Guide");
         System.out.println("-> Press 3 to: Complete Quests");
@@ -21,7 +21,7 @@ public class Game {
     }
 
 
-    public static void whichQuest() {
+    public static void whichQuest() throws InterruptedException {
         System.out.println("Which Quest?");
         int option = Integer.parseInt(Code.scanner.nextLine());
         if(option == 1) {
@@ -52,5 +52,6 @@ public class Game {
             System.out.println("Buy another Item? (Yes, No)");
             option = Code.scanner.nextLine();
         } while (option.equals("Yes"));
+        System.out.println("You now have "+gemCount+" Gems.");
     }
 }

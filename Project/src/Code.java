@@ -11,11 +11,11 @@ public class Code {
         scanner = new Scanner(System.in);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         new Code().run();
     }
 
-    private void run() {
+    private void run() throws InterruptedException {
         addCombo("Sami", "-");
         addCombo("Nikita", "-");
         System.out.println("Hello.");
@@ -32,12 +32,13 @@ public class Code {
     }
 
     // Creates User and adds him to HashMap <Login>
-    private void createUser() {
+    private void createUser() throws InterruptedException {
         System.out.println("R: Username > ");
         String username = scanner.nextLine();
         System.out.println("R: Password > ");
         String password = scanner.nextLine();
         addCombo(username, password);
+        something();
     }
 
     private boolean loginAction() {
@@ -69,7 +70,7 @@ public class Code {
         }
     }
 
-    private void something() {
+    private void something() throws InterruptedException {
         if(checkLogin()) {
             Game.theGame();
         }
