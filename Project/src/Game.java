@@ -25,10 +25,18 @@ public class Game {
         System.out.println("Which Quest?");
         int option = Integer.parseInt(Code.scanner.nextLine());
         if(option == 1) {
-            gemCount += Quest1.quest();
+            Quest1.quest();
+            gemCount += new Quest1().getGems();
         }
     }
 
+
+    /*
+    * Shows Item Shop
+    * @param String option
+    * Asks which Item is to be bought
+    * do-while loop for the option of buying an item (must buy at least one item)
+    * */
     public static void itemShop() {
         ArrayList<String> items = new ArrayList<>();
         items.add("Shield");
@@ -53,5 +61,13 @@ public class Game {
             option = Code.scanner.nextLine();
         } while (option.equals("Yes"));
         System.out.println("You now have "+gemCount+" Gems.");
+    }
+
+    public void setGemCount(int gemCount) {
+        Game.gemCount = gemCount;
+    }
+
+    public int getGemCount() {
+        return gemCount;
     }
 }
