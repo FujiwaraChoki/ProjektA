@@ -32,15 +32,16 @@ public class Game {
         System.out.println("Here are following Quests:");
         System.out.println("1 -> Pokémon Quest");
         System.out.println("2 -> Guess the Number correctly");
+        System.out.println("3 -> Exit");
         int option = Integer.parseInt(Code.scanner.nextLine());
         if(option == 1) {
-            Quest1.quest();
             gemCount += Quest1.quest();
         } else if(option == 2) {
-            System.out.println("second quest");
+            gemCount += Quest2.quest();
+        } else if(option == 3) {
+            System.exit(0);
         }
     }
-
 
     /*
     * Shows Item Shop
