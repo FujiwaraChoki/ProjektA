@@ -21,8 +21,12 @@ public class Code {
     }
 
     private void run() throws InterruptedException {
-        addCombo("Sami", "-");
-        addCombo("Nikita", "-");
+        addCombo("Sami", "p@ssw0rd123");
+        addCombo("Nikita", "p@ssw0rd123");
+        System.out.println("TEST ACCOUNT");
+        System.out.println("USERNAME: -");
+        System.out.println("PASSWORD: -");
+        addCombo("-", "-");
         System.out.println("Hello.");
         System.out.println("Oce upon a time...");
         System.out.println("Login (1) or create Account (2) > ");
