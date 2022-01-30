@@ -25,8 +25,7 @@ public class Quest1 {
         }
 
         if(amountOfEnters > 10) {
-            System.out.println("You've successfully pressed [Enter] " +
-                    amountOfEnters + " times, in under 5 Seconds.");
+            System.out.println("You caught the Pokémon!");
             gems = amountOfEnters / 2;
             System.out.println("You received "+gems+" Gems from this Quest.");
             gems += game.getGemCount();

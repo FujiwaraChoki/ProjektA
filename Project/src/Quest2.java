@@ -28,6 +28,7 @@ public class Quest2 {
     public static int readInt() {
         return Integer.parseInt(Code.scanner.nextLine());
     }
+
     public static boolean isCorrect(int num) {
         int random = randomInt();
         System.out.println(random);
