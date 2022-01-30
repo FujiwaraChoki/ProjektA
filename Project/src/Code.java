@@ -1,9 +1,16 @@
+/*
+* MAIN CLASS OF THIS PROGRAM
+* WRITTEN BY SAMI HINDI
+* INCLUDES 6 CLASSES (FOR THE TIME BEING)
+* */
+
+
 import java.util.HashMap;
 import java.util.Scanner;
 
 /*
 * Author: Sami Hindi
-* Version: 0.5
+* Version: 0.81
 * */
 
 public class Code {
