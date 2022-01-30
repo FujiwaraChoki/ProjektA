@@ -11,7 +11,7 @@ public class Quest1 {
         System.out.println("Press [Enter] as many times as you can, in a matter of 5 Seconds"+
                 ", to catch the Pokémon.");
 
-        double s = 5000;
+        double s = 5000; // 500 Seconds are 5 Seconds
 
         long start = System.currentTimeMillis();
         while(System.currentTimeMillis() < start+s){

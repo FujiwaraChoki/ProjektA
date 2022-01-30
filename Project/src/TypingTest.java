@@ -8,6 +8,7 @@ public class TypingTest {
         System.out.println();
         System.out.println(text);
         // Measures Time between before input and after input to determine how fast the User was
+        // Gives back Gems (Time / 2)
         long start = System.nanoTime();
         String input = readLine();
         long end = System.nanoTime();
