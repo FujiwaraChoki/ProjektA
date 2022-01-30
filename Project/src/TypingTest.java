@@ -7,6 +7,7 @@ public class TypingTest {
         System.out.println("Copy the following text:");
         System.out.println();
         System.out.println(text);
+        // Measures Time between before input and after input to determine how fast the User was
         long start = System.nanoTime();
         String input = readLine();
         long end = System.nanoTime();

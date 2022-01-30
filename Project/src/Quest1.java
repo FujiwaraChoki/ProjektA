@@ -1,12 +1,10 @@
 public class Quest1 {
 
-    private static int gems;
-
     /*
     * Pokémon Quest
-    * Measures Time between Start and End of while loop (Dunk)
+    * User presses Enter as many times as possible in certain amount of time to receive Gems/catch the pokémon
     * */
-    public static int quest() throws InterruptedException {
+    public static int quest() {
         Game game = new Game();
         int amountOfEnters = 0;
         System.out.println("This Quest is about catching a Pokémon.");
@@ -24,18 +22,15 @@ public class Quest1 {
             }
         }
 
+        // If amount of Enters pressed greater than 10 User will receive gems, if not user receives 0 gems.
         if(amountOfEnters > 10) {
             System.out.println("You caught the Pokémon!");
-            gems = amountOfEnters / 2;
-            System.out.println("You received "+gems+" Gems from this Quest.");
+            int gems = amountOfEnters / 2;
+            System.out.println("You received "+ gems +" Gems from this Quest.");
             gems += game.getGemCount();
             return gems;
         } else {
             return 0;
         }
-    }
-
-    public int getGems() {
-        return gems;
     }
 }
