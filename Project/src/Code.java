@@ -31,11 +31,12 @@ public class Code {
         System.out.println("Oce upon a time...");
         System.out.println("Login (1) or create Account (2) > ");
         switch(Integer.parseInt(scanner.nextLine())) {
-            case 1 -> something();
+            case 1 -> checkLogin2();
             case 2 -> createUser();
         }
     }
 
+    // Adds new User to HashMap <Login>
     private void addCombo(String username, String password) {
         logins.put(username, password);
     }
@@ -47,9 +48,10 @@ public class Code {
         System.out.println("R: Password > ");
         String password = scanner.nextLine();
         addCombo(username, password);
-        something();
+        checkLogin2();
     }
 
+    // Makes User login to Account
     private boolean loginAction() {
         System.out.println("L: Username > ");
         String username = scanner.nextLine();
@@ -66,10 +68,12 @@ public class Code {
         }
     }
 
+    // Shows up if either Username doesn't exist, or password wrong
     private void fehlerMeldung() {
         System.out.println("Fehler!");
     }
 
+    // Checks the Login
     private boolean checkLogin() {
         if(loginAction()) {
             return true;
@@ -79,7 +83,8 @@ public class Code {
         }
     }
 
-    private void something() throws InterruptedException {
+    // Final Login Check
+    private void checkLogin2() throws InterruptedException {
         if(checkLogin()) {
             Game.theGame();
         }
