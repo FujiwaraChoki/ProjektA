@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /*
 * Author: Sami Hindi
-* Version: 0.81
+* Version: 0.82
 * */
 
 public class Code {
