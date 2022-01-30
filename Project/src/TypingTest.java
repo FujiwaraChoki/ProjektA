@@ -14,7 +14,7 @@ public class TypingTest {
         long elapsedTime = end - start ;
         if(input.equals(text)) {
             long time = elapsedTime / 1000000000;
-            gems += time / 10;
+            gems += time / 2;
             System.out.println("You needed "+time+" Seconds to complete the Text.");
         } else {
             System.out.println("Sadly, you typed wrong.");
