@@ -21,6 +21,7 @@ public class Quest1 {
                 Code.scanner.nextLine();
             }
         }
+        Code.scanner.close();
 
         // If amount of Enters pressed greater than 10 User will receive gems, if not user receives 0 gems.
         if(amountOfEnters > 10) {
