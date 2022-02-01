@@ -5,7 +5,7 @@ public class TypingTest {
 
     public static int typingTest() {
         int gems = 0;
-        String text = ranmdomSentence();
+        String text = randomSentence();
         System.out.println("This application will test your writing speed.");
         System.out.println("Copy the following text:");
         System.out.println();
@@ -18,7 +18,11 @@ public class TypingTest {
         long elapsedTime = end - start ;
         if(input.equals(text)) {
             long seconds = elapsedTime / 1000000000;
-            gems += seconds / 2;
+            if(seconds < 2) {
+                gems += seconds * 5;
+            } else {
+                gems += seconds + 1;
+            }
             System.out.println("You needed "+seconds+" Seconds to complete the Text.");
         } else {
             System.out.println("Sadly, you typed wrong.");
@@ -31,7 +35,7 @@ public class TypingTest {
         return Code.scanner.nextLine();
     }
 
-    public static String ranmdomSentence() {
+    public static String randomSentence() {
         Random randomNumber = new Random();
         // Variables hold words to be chosen by program
         String article1 = "A";
