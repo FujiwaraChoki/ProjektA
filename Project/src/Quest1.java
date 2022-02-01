@@ -4,7 +4,7 @@ public class Quest1 {
     * Pokémon Quest
     * User presses Enter as many times as possible in certain amount of time to receive Gems/catch the pokémon
     * */
-    public static int quest() {
+    public static int quest() throws InterruptedException {
         Game game = new Game();
         int amountOfEnters = 0;
         System.out.println("This Quest is about catching a Pokémon.");
@@ -21,7 +21,7 @@ public class Quest1 {
                 Code.scanner.nextLine();
             }
         }
-        Code.scanner.close();
+        Thread.sleep(5000);
 
         // If amount of Enters pressed greater than 10 User will receive gems, if not user receives 0 gems.
         if(amountOfEnters > 10) {
