@@ -16,16 +16,18 @@ public class Game {
             System.out.println("Game Menu");
             System.out.println();
             System.out.println("-> Press 1 to: Open Item Shop (You have to buy at least 1 Item)");
-            System.out.println("-> Press 2 to: Game Guide");
-            System.out.println("-> Press 3 to: Complete Quests");
-            System.out.println("-> Press 4 to: See how many Gems you have");
-            System.out.println("-> Press 5 to: Check how fast you type");
+            System.out.println("-> Press 2 to: Complete Quests");
+            System.out.println("-> Press 3 to: See how many Gems you have");
+            System.out.println("-> Press 4 to: Check how fast you type");
+            System.out.println("-> Press 5 to: Open Calculator");
+            System.out.println("-> Press 6 to: Game Guide");
             switch(Integer.parseInt(Code.scanner.nextLine())){
-                case 3 -> whichQuest();
                 case 1 -> itemShop();
-                case 2 -> Guide.printGuide();
-                case 4 -> System.out.println(gemCount);
-                case 5 -> addTheTwo();
+                case 2-> whichQuest();
+                case 3 -> System.out.println(gemCount);
+                case 4 -> addTheTwo();
+                case 5 -> Calculator.calc();
+                case 6 -> Guide.printGuide();
             }
             System.out.println("Do you want to take Action again? (Yes/No)");
             action = Code.scanner.nextLine().toUpperCase();

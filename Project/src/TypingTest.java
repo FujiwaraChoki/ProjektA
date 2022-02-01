@@ -6,12 +6,13 @@ public class TypingTest {
     public static int typingTest() {
         int gems = 0;
         String text = randomSentence();
+        System.out.println();
         System.out.println("This application will test your writing speed.");
         System.out.println("Copy the following text:");
         System.out.println();
         System.out.println(text);
         // Measures Time between before input and after input to determine how fast the User was
-        // Gives back Gems (Time / 2)
+        // Gives back Gems depending on how fast the User was
         long start = System.nanoTime();
         String input = readLine();
         long end = System.nanoTime();
@@ -64,8 +65,6 @@ public class TypingTest {
         String verb7 = "broke";
         //sets up variable for final sentence
         String finalSentence = " ";
-        //displays title of program
-        System.out.println("\n Random sentence generator \n\n");
         // sets up loop to generate number of sentences desired
         for (int i = 1; i <= 10; i++) {
             switch (1 + randomNumber.nextInt(2)) {//generates numbers 1-2 {
@@ -73,7 +72,7 @@ public class TypingTest {
                     finalSentence = article1 + " ";
                     break;
                 case 2:
-                    finalSentence = article2 + " ";
+                    finalSentence = article2 + " "; break;
             }
             switch (1 + randomNumber.nextInt(7)) {//generates numbers 1-7 {
                 case 1:
@@ -95,9 +94,10 @@ public class TypingTest {
                     finalSentence += noun6 + " ";
                     break;
                 case 7:
-                    finalSentence += noun7 + " ";
+                    finalSentence += noun7 + " "; break;
             }
-            switch (1 + randomNumber.nextInt(7)) {//generates numbers 1-7 {
+            // Can be replaced with enhanced Switch like the other times
+            switch (1 + randomNumber.nextInt(7)) {// Generates numbers 1-7
                 case 1:
                     finalSentence += verb1 + " ";
                     break;
@@ -117,14 +117,14 @@ public class TypingTest {
                     finalSentence += verb6 + " ";
                     break;
                 case 7:
-                    finalSentence += verb7 + " ";
+                    finalSentence += verb7 + " "; break;
             }
             switch (1 + randomNumber.nextInt(2)) {//generates numbers 1-3 {
                 case 1:
                     finalSentence += article3 + " ";
                     break;
                 case 2:
-                    finalSentence += article4 + " ";
+                    finalSentence += article4 + " "; break;
             }
             switch (1 + randomNumber.nextInt(6)) {//generates numbers 1-6 {
                 case 1:
@@ -143,10 +143,10 @@ public class TypingTest {
                     finalSentence += nounE + ".";
                     break;
                 case 6:
-                    finalSentence += nounF + ".";
+                    finalSentence += nounF + "."; break;
             }
             return finalSentence; // Returns the random made Sentence
-        }//end for
+        }// End of for-loop
         return "";
     }
 }
