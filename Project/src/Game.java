@@ -77,6 +77,7 @@ public class Game {
 
         String option;
         do {
+            
             System.out.println();
             System.out.println("Here are the current Items: ");
             System.out.println();
