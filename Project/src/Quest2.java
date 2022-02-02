@@ -21,6 +21,7 @@ public class Quest2 {
         return gems;
     }
 
+
     public static int randomInt() {
         return (int) (Math.random() * 10 + 1);
     }

@@ -147,6 +147,7 @@ public class TypingTest {
             }
             return finalSentence; // Returns the random made Sentence
         }// End of for-loop
+
         return "";
     }
 }

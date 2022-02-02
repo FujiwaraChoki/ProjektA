@@ -16,6 +16,7 @@ public class Calculator {
             case "-" -> minus(num1, num2);
             case "*" -> multiply(num1, num2);
             case "/" -> divide(num1, num2);
+
         }
 
     }

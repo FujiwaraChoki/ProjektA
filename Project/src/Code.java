@@ -43,6 +43,7 @@ public class Code {
         }
     }
 
+
     // Adds new User to HashMap <Login>
     private void addCombo(String username, String password) {
         logins.put(username, password);
