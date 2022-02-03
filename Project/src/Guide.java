@@ -16,6 +16,7 @@ public class Guide {
         System.out.println("Number Guessing Quest = 1 ");
     }
 
+
     public static String readLine() {
         return Code.scanner.nextLine();
     }

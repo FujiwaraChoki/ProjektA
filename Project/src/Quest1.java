@@ -4,6 +4,7 @@ public class Quest1 {
     * Pokémon Quest
     * User presses Enter as many times as possible in certain amount of time to receive Gems/catch the pokémon
     * */
+
     public static int quest() throws InterruptedException {
         Game game = new Game();
         int amountOfEnters = 0;

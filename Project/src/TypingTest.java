@@ -18,6 +18,7 @@ public class TypingTest {
         long end = System.nanoTime();
         long elapsedTime = end - start ;
         if(input.equals(text)) {
+            // Calculates Seconds
             long seconds = elapsedTime / 1000000000;
             if(seconds < 2) {
                 gems += seconds * 5;
@@ -147,6 +148,7 @@ public class TypingTest {
             }
             return finalSentence; // Returns the random made Sentence
         }// End of for-loop
+
         return "";
         
     }

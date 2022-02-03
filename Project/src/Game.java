@@ -32,6 +32,7 @@ public class Game {
             System.out.println("Do you want to take Action again? (Yes/No)");
             action = Code.scanner.nextLine().toUpperCase();
         }while(action.equals("YES"));
+        
     }
 
 
