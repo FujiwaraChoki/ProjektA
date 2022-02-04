@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Random;
 import java.lang.*;
 
 public class TypingTest {
@@ -6,26 +6,21 @@ public class TypingTest {
     public static int typingTest() {
         int gems = 0;
         String text = randomSentence();
-        System.out.println();
         System.out.println("This application will test your writing speed.");
         System.out.println("Copy the following text:");
         System.out.println();
         System.out.println(text);
         // Measures Time between before input and after input to determine how fast the User was
-        // Gives back Gems depending on how fast the User was
+        // Gives back Gems (Time / 2)
         long start = System.nanoTime();
         String input = readLine();
         long end = System.nanoTime();
         long elapsedTime = end - start ;
         if(input.equals(text)) {
             // Calculates Seconds
-            long seconds = elapsedTime / 1000000000;
-            if(seconds < 2) {
-                gems += seconds * 5;
-            } else {
-                gems += seconds + 1;
-            }
-            System.out.println("You needed "+seconds+" Seconds to complete the Text.");
+            long time = elapsedTime / 1000000000;
+            gems += time / 2;
+            System.out.println("You needed "+time+" Seconds to complete the Text.");
         } else {
             System.out.println("Sadly, you typed wrong.");
         }
@@ -65,91 +60,44 @@ public class TypingTest {
         String verb6 = "followed";
         String verb7 = "broke";
         //sets up variable for final sentence
-        String finalSentence = " ";
+        String finalSentence = "";
         // sets up loop to generate number of sentences desired
         for (int i = 1; i <= 10; i++) {
             switch (1 + randomNumber.nextInt(2)) {//generates numbers 1-2 {
-                case 1:
-                    finalSentence = article1 + " ";
-                    break;
-                case 2:
-                    finalSentence = article2 + " "; break;
+                case 1 -> finalSentence = article1 + " ";
+                case 2 -> finalSentence = article2 + " ";
             }
-            switch (1 + randomNumber.nextInt(7)) {//generates numbers 1-7 {
-                case 1:
-                    finalSentence += noun1 + " ";
-                    break;
-                case 2:
-                    finalSentence += noun2 + " ";
-                    break;
-                case 3:
-                    finalSentence += noun3 + " ";
-                    break;
-                case 4:
-                    finalSentence += noun4 + " ";
-                    break;
-                case 5:
-                    finalSentence += noun5 + " ";
-                    break;
-                case 6:
-                    finalSentence += noun6 + " ";
-                    break;
-                case 7:
-                    finalSentence += noun7 + " "; break;
-            }
+            finalSentence = getString(randomNumber, noun1, noun2, noun3, noun4, noun5, noun6, noun7, finalSentence);
             // Can be replaced with enhanced Switch like the other times
-            switch (1 + randomNumber.nextInt(7)) {// Generates numbers 1-7
-                case 1:
-                    finalSentence += verb1 + " ";
-                    break;
-                case 2:
-                    finalSentence += verb2 + " ";
-                    break;
-                case 3:
-                    finalSentence += verb3 + " ";
-                    break;
-                case 4:
-                    finalSentence += verb4 + " ";
-                    break;
-                case 5:
-                    finalSentence += verb5 + " ";
-                    break;
-                case 6:
-                    finalSentence += verb6 + " ";
-                    break;
-                case 7:
-                    finalSentence += verb7 + " "; break;
-            }
+            finalSentence = getString(randomNumber, verb1, verb2, verb3, verb4, verb5, verb6, verb7, finalSentence);
             switch (1 + randomNumber.nextInt(2)) {//generates numbers 1-3 {
-                case 1:
-                    finalSentence += article3 + " ";
-                    break;
-                case 2:
-                    finalSentence += article4 + " "; break;
+                case 1 -> finalSentence += article3 + " ";
+                case 2 -> finalSentence += article4 + " ";
             }
             switch (1 + randomNumber.nextInt(6)) {//generates numbers 1-6 {
-                case 1:
-                    finalSentence += nounA + ".";
-                    break;
-                case 2:
-                    finalSentence += nounB + ".";
-                    break;
-                case 3:
-                    finalSentence += nounC + ".";
-                    break;
-                case 4:
-                    finalSentence += nounD + ".";
-                    break;
-                case 5:
-                    finalSentence += nounE + ".";
-                    break;
-                case 6:
-                    finalSentence += nounF + "."; break;
+                case 1 -> finalSentence += nounA + ".";
+                case 2 -> finalSentence += nounB + ".";
+                case 3 -> finalSentence += nounC + ".";
+                case 4 -> finalSentence += nounD + ".";
+                case 5 -> finalSentence += nounE + ".";
+                case 6 -> finalSentence += nounF + ".";
             }
             return finalSentence; // Returns the random made Sentence
         }// End of for-loop
 
         return "";
-        
+    }
+
+    private static String getString(Random randomNumber, String noun1, String noun2, String noun3, String noun4, String noun5, String noun6, String noun7, String finalSentence) {
+        switch (1 + randomNumber.nextInt(7)) {//generates numbers 1-7 {
+            case 1 -> finalSentence += noun1 + " ";
+            case 2 -> finalSentence += noun2 + " ";
+            case 3 -> finalSentence += noun3 + " ";
+            case 4 -> finalSentence += noun4 + " ";
+            case 5 -> finalSentence += noun5 + " ";
+            case 6 -> finalSentence += noun6 + " ";
+            case 7 -> finalSentence += noun7 + " ";
+        }
+        return finalSentence;
     }
 }

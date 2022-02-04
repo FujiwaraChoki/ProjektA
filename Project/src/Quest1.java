@@ -22,7 +22,12 @@ public class Quest1 {
                 Code.scanner.nextLine();
             }
         }
-        Thread.sleep(5000);
+        int in = 0;
+        while(in < 5) {
+            System.out.println("Done");
+            Thread.sleep(5000);
+            in++;
+        }
 
         // If amount of Enters pressed greater than 10 User will receive gems, if not user receives 0 gems.
         if(amountOfEnters > 10) {

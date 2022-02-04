@@ -5,6 +5,12 @@
 * */
 
 
+/*
+* MAIN CLASS OF THIS PROGRAM
+* WRITTEN BY SAMI HINDI
+* INCLUDES 7 CLASSES (FOR THE TIME BEING)
+* */
+
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -31,9 +37,8 @@ public class Code {
         addCombo("Sami", "p@ssw0rd123");
         addCombo("Nikita", "p@ssw0rd123");
         addCombo("-", "-");
-        System.out.println("TEST ACCOUNT");
-        System.out.println("USERNAME: -");
-        System.out.println("PASSWORD: -");
+        System.out.println("TEST ACCOUNT:");
+        System.out.println(returnLoginData());
         System.out.println("Hello.");
         System.out.println("Oce upon a time...");
         System.out.println("Login (1) or create Account (2) > ");
@@ -96,5 +101,9 @@ public class Code {
         if(checkLogin()) {
             Game.theGame();
         }
+    }
+    public static String returnLoginData() {
+        return "Username: -"+"\n"+
+                "Password: -";
     }
 }
