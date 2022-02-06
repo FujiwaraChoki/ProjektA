@@ -9,6 +9,7 @@
 * MAIN CLASS OF THIS PROGRAM
 * WRITTEN BY SAMI HINDI
 * INCLUDES 7 CLASSES (FOR THE TIME BEING)
+* SOFTWARE HAS APPROX. 500 LINES
 * */
 
 import java.util.HashMap;
@@ -40,7 +41,7 @@ public class Code {
         System.out.println("TEST ACCOUNT:");
         System.out.println(returnLoginData());
         System.out.println("Hello.");
-        System.out.println("Oce upon a time...");
+        System.out.println("Text Based Game");
         System.out.println("Login (1) or create Account (2) > ");
         switch(Integer.parseInt(scanner.nextLine())) {
             case 1 -> checkLogin2();

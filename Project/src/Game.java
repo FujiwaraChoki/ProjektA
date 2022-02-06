@@ -25,6 +25,7 @@ public class Game {
             System.out.println("-> Press 3 to: Complete Quests");
             System.out.println("-> Press 4 to: See how many Gems you have");
             System.out.println("-> Press 5 to: Check how fast you type!");
+            System.out.println("-> Press 6 to: Use the Calculator (Only two Numbers)");
             switch(Integer.parseInt(Code.scanner.nextLine())){
                 case 3 -> whichQuest();
                 case 1 -> itemShop();
@@ -61,18 +62,18 @@ public class Game {
     * do-while loop for the option of buying an item (must buy at least one item)
     * */
     public static void itemShop() {
-        ArrayList<String> items = new ArrayList<>();
+        ArrayList<String> availableItems = new ArrayList<>();
         HashMap<String, Integer> prices = new HashMap<>();
-        items.add("Shield");
-        items.add("Sword");
-        items.add("Hat");
-        items.add("Horse");
-        items.add("Shirt");
-        prices.put(items.get(0), 25);
-        prices.put(items.get(1), 50);
-        prices.put(items.get(2), 5);
-        prices.put(items.get(3), 200);
-        prices.put(items.get(4), 40);
+        availableItems.add("Shield");
+        availableItems.add("Sword");
+        availableItems.add("Hat");
+        availableItems.add("Horse");
+        availableItems.add("Shirt");
+        prices.put(availableItems.get(0), 25);
+        prices.put(availableItems.get(1), 50);
+        prices.put(availableItems.get(2), 5);
+        prices.put(availableItems.get(3), 200);
+        prices.put(availableItems.get(4), 40);
 
         String option;
         do {
@@ -80,18 +81,16 @@ public class Game {
             System.out.println();
             System.out.println("Here are the current Items: ");
             System.out.println();
-            for(int i=0; i<items.size(); i++) {
-                System.out.println(i+"-> "+items.get(i));
+            for(int i=0; i<availableItems.size(); i++) {
+                System.out.println(i+"-> "+availableItems.get(i));
             }
             System.out.println("Which Item is to be bought? (Give Index and Product Name, Starts from 0)");
-            System.out.print("Index: ");
-            int itemIndex = Integer.parseInt(Code.scanner.nextLine());
             System.out.print("Name: ");
             String itemName = Code.scanner.nextLine();
             if(gemCount > prices.get(itemName)) {
                 gemCount -= prices.get(itemName);
-                System.out.println("Purchased the following: "+items.get(itemIndex));
-                items.remove(itemIndex);
+                System.out.println("Purchased the following: "+itemName);
+                availableItems.remove("itemIndex");
                 userItems.add(itemName);
                 System.out.println("Moechten Sie Ihre Gegenstände auflisten?");
                 if(Code.scanner.nextLine().equals("Yes")) {
@@ -108,7 +107,7 @@ public class Game {
             System.out.println("Buy another Item? (Yes, No)");
             option = Code.scanner.nextLine();
         } while (option.equals("Yes"));
-        System.out.println("Gems: "+gemCount);
+        System.out.print("Gems: "+gemCount);
     }
 
     public int getGemCount() {
